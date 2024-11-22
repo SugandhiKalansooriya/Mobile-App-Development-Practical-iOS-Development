@@ -23,10 +23,8 @@ struct PlanetCardView: View {
                         .scaledToFill()
                         .frame(width: 80, height: 80)
                         .clipShape(Circle())
-                        .overlay( 
-                                                    Circle()
-                                                        .stroke(Color("ColorPrimary"), lineWidth: 2)
-                                                )
+                        .overlay( Circle()
+                                .stroke(Color("ColorPrimary"), lineWidth: 2))
                         
                 case .failure:
                     Image(systemName: "photo")
@@ -35,10 +33,8 @@ struct PlanetCardView: View {
                         .frame(width: 80, height: 80)
                         .foregroundColor(.gray)
                         .clipShape(Circle())
-                        .overlay(
-                                                    Circle()
-                                                        .stroke(Color("ColorPrimary"), lineWidth: 2)
-                                                )
+                        .overlay(Circle()
+                                 .stroke(Color("ColorPrimary"), lineWidth: 2))
                 default:
                     ProgressView()
                         .frame(width: 80, height: 80)
